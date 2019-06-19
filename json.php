@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Clinton Nzedimma
- * @package RESTful API
+ * @package RESTful API version 1.0
  */
 
 /*error_reporting (E_ERROR);*/
