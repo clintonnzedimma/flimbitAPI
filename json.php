@@ -5,7 +5,7 @@
  */
 
 /*error_reporting (E_ERROR);*/
-// Script for RESTful API in JSON format
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 include $_SERVER['DOCUMENT_ROOT'].'/new_flimbit/engine/env/ftf.php';
