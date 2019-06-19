@@ -1,4 +1,9 @@
 <?php
+/**
+ * @author Clinton Nzedimma
+ * @package RESTful API
+ */
+
 /*error_reporting (E_ERROR);*/
 // Script for RESTful API in JSON format
 header("Access-Control-Allow-Origin: *");
