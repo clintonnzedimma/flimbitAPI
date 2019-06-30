@@ -1,19 +1,17 @@
 <?php
 /**
  * @author Clinton Nzedimma
- * @package RESTful API version 1.0
+ * @package RESTful API
  */
 
 /*error_reporting (E_ERROR);*/
-
+// Script for RESTful API in JSON format
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 include $_SERVER['DOCUMENT_ROOT'].'/new_flimbit/engine/env/ftf.php';
 
 // Change to POST later
-if ($_SERVER['REQUEST_METHOD'] == 'POST' ||  $_SERVER['REQUEST_METHOD'] == 'GET') {
-	
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST' ||  $_SERVER['REQUEST_METHOD'] === 'GET') {
 	$flimbit_api_response = []; // Flimbit API response array for telling the developer information of his response
 
 	$api_primary_data = []; // Data to be sent to the developer
@@ -144,6 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' ||  $_SERVER['REQUEST_METHOD'] == 'GET'
 
 					$api_primary_data = array(
 						"token" => $user->get('token'),
+						"user_data" => $user->public_data,
 						"errors" => null,
 						"status" => 'SUCCESS'
 					);
