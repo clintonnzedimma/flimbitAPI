@@ -38,7 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ||  $_SERVER['REQUEST_METHOD'] === 'GE
 		/**
 		* @block   if entity is 'ad'or 'school'
 		*/
-		if ($entity == 'ad' || $entity == 'school') {
+		if ($entity == 'ad' || $entity == 'school' || $entity == 'users') {
+			if($entity == 'users') {
+				$entity = 'user';
+			}
 			$entity_factory_methods = get_class_methods($entity.'_factory');
 
 			if (in_array($m, $entity_factory_methods)) {
