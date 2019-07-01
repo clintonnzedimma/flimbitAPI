@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ||  $_SERVER['REQUEST_METHOD'] === 'GE
 			if($entity == 'users') {
 				$entity = 'user';
 			}
+			
 			$entity_factory_methods = get_class_methods($entity.'_factory');
 
 			if (in_array($m, $entity_factory_methods)) {
